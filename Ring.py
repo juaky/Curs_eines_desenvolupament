@@ -29,9 +29,9 @@ class Ring(IRing):
             pica = self._Lluitadors[elQuePica].get_Lluitador().Pica()
 
             if pica in proteccio:
-                self._Lluitadors[elQueRep].treu_vida()
+                self._Lluitadors[elQueRep].treu_vida(self._Lluitadors[elQuePica].get_Lluitador().get_Forca())
                 print(
-                    f'{self._Lluitadors[elQueRep].get_nom()} rep un cop al {pica.name} de {self._Lluitadors[elQuePica].get_nom()}')
+                    f'{self._Lluitadors[elQueRep].get_nom()} ({self._Lluitadors[elQueRep].get_vida()}) rep un cop al {pica.name} de {self._Lluitadors[elQuePica].get_nom()} ({self._Lluitadors[elQuePica].get_vida()})')
             else:
                 print(
                     f'{self._Lluitadors[elQueRep].get_nom()} atura el cop al {pica.name} de {self._Lluitadors[elQuePica].get_nom()}')

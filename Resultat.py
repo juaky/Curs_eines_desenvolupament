@@ -25,7 +25,7 @@ class ICombatents(IResultat):
         """Retorna el lluitador"""
         pass
 
-    def treu_vida(self) -> int:
+    def treu_vida(self, quanta : int) -> int:
         """Treu vida del lluitador i retorna la que li queda"""
         pass
 
@@ -48,6 +48,6 @@ class Resultat(ICombatents):
     def get_Lluitador(self) -> ILluitador:
         return self._Lluitador
 
-    def treu_vida(self) -> int:
-        self._Vida = self._Vida - 1
+    def treu_vida(self, quanta: int) -> int:
+        self._Vida = self._Vida - quanta
         return self._Vida

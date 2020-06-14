@@ -23,3 +23,7 @@ class LluitadorRandom(ILluitador):
         """Determina on pica el lluitador"""
         pica = choice(list(LlocOnPicar))
         return pica
+
+    def get_Forca(self) -> int:
+        """Determina la força del cop"""
+        return 1
