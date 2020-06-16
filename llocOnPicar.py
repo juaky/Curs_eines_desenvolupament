@@ -6,3 +6,4 @@ class LlocOnPicar(Enum):
     COSTATESQUERRA = 2
     COSTATDRET = 3
     PANXA = 4
+    ILEGAL = 5
