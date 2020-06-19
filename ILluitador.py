@@ -8,5 +8,5 @@ class ILluitador:
         pass
 
     def Pica(self):
-        """Determina on pica el lluitador"""
+        """Determina on pica el lluitador i com"""
         pass

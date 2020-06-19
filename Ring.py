@@ -32,7 +32,7 @@ class Ring(IRing):
 
             elQueRep = (elQuePica+1) % 2
             proteccio = self._Lluitadors[elQueRep].get_Lluitador().Protegeix()
-            pica = self._Lluitadors[elQuePica].get_Lluitador().Pica()
+            _, pica = self._Lluitadors[elQuePica].get_Lluitador().Pica()
 
             efecteSobreDefensor = 0
             efecteSobreAtacant = 0
