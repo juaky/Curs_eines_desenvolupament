@@ -1,5 +1,5 @@
 from random import seed
-from random import randrange, choice
+from random import randrange, choice, sample
 from llocOnPicar import LlocOnPicar
 from ILluitador import ILluitador
 
@@ -16,15 +16,9 @@ class LluitadorRandom(ILluitador):
 
     def Protegeix(self) -> list:
         """Llista de llocs on es protegeix"""
-        llocs = self._copsPossibles.copy()
-        llocs.pop(randrange(len(llocs)))
-        return llocs
-
+        return sample(self._copsPossibles, 3)
+ 
     def Pica(self):
         """Determina on pica el lluitador"""
         pica = choice(self._copsPossibles)
         return pica
-
-    def get_Forca(self) -> int:
-        """Determina la força del cop"""
-        return 1
