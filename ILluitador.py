@@ -1,16 +1,18 @@
+from random import randrange, choice
+
+
 class ILluitador:
     def get_nom(self) -> str:
-        """retorna el nom del lluitador."""
-        pass
+        return self._nom
 
     def Protegeix(self) -> list:
-        """Llista de llocs on es protegeix"""
-        pass
+        llocs = self._copsPossibles.copy()
+        llocs.pop(randrange(len(llocs)))
+        return llocs
 
     def Pica(self):
-        """Determina on pica el lluitador"""
-        pass
+        pica = choice(self._copsPossibles)
+        return pica
 
     def get_Forca(self) -> int:
-        """Determina la força del cop"""
-        pass
+        return 1
