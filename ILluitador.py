@@ -1,4 +1,6 @@
-from random import randrange, choice
+from random import sample, choice
+
+from llocOnPicar import Atac
 
 
 class ILluitador:
@@ -6,13 +8,8 @@ class ILluitador:
         return self._nom
 
     def Protegeix(self) -> list:
-        llocs = self._copsPossibles.copy()
-        llocs.pop(randrange(len(llocs)))
-        return llocs
+        return sample(self._copsPossibles, 3)
 
     def Pica(self):
         pica = choice(self._copsPossibles)
-        return pica
-
-    def get_Forca(self) -> int:
-        return 1
+        return Atac.NORMAL, pica
