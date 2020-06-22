@@ -10,3 +10,7 @@ class ILluitador:
     def Pica(self):
         """Determina on pica el lluitador"""
         pass
+
+    def get_Forca(self) -> int:
+        """Determina la força del cop"""
+        pass

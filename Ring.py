@@ -33,10 +33,9 @@ class Ring(IRing):
             elQueRep = (elQuePica+1) % 2
             proteccio = self._Lluitadors[elQueRep].get_Lluitador().Protegeix()
             pica = self._Lluitadors[elQuePica].get_Lluitador().Pica()
-            forca = 1
 
             if pica in proteccio or pica == LlocOnPicar.ILEGAL:
-                self._Lluitadors[elQueRep].treu_vida(forca)
+                self._Lluitadors[elQueRep].treu_vida(self._Lluitadors[elQuePica].get_Lluitador().get_Forca())
                 print(
                     f'{self._Lluitadors[elQueRep].get_nom()} ({self._Lluitadors[elQueRep].get_vida()}) rep un cop al {pica.name} de {self._Lluitadors[elQuePica].get_nom()} ({self._Lluitadors[elQuePica].get_vida()})')
             else:
